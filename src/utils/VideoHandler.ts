@@ -136,6 +136,7 @@ export class VideoHandler {
       this.onLoadeMetaData,
     );
     this.videoRef.current?.addEventListener('ended', this.onEnded);
+
   }, []);
 
   removeEventListeners = useCallback(() => {

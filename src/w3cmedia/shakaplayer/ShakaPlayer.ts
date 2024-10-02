@@ -162,6 +162,37 @@ export class ShakaPlayer implements PlayerInterface {
 
     console.log('shakaplayer: creating');
     this.player = new shaka.Player(this.mediaElement);
+
+    const networkingEngine = this.player.getNetworkingEngine();
+    if (!networkingEngine) {
+      console.error('@@@@@ [Dev] Networking engine is not available.');
+      return;
+    }
+
+    // networkingEngine.registerRequestFilter(async (type, response) => {
+    //   try {
+    //     console.log('@@@@@ [Dev] registerRequestFilter Request', type, response);
+    //   } catch (error) {
+    //     console.error('@@@@@ [Dev] registerRequestFilter Error:', error);
+    //   }
+    // });
+    //
+    // networkingEngine.registerResponseFilter(async (type, response) => {
+    //   try {
+    //     console.log('@@@@@ [Dev] registerResponseFilter Response', type, response);
+    //   } catch (error) {
+    //     console.error('@@@@@ [Dev] registerResponseFilter Error:', error);
+    //   }
+    // });
+
+    this.player.addEventListener('error', (event) => {
+      console.error('@@@@@ [Dev] addEventListener("error") Error data:', event);
+    });
+
+    this.player.addEventListener('downloadfailed', (event) => {
+      console.error('@@@@@ [Dev] downloadfailed Error data:', { type: event.type, error: event.error, request: event.request });
+    });
+
     console.log('shakaplayer: loading');
 
     // Registering the Custom filters for uplynk test streams.
