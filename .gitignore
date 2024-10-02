@@ -1,0 +1,18 @@
+# Build Files
+kepler-build
+node_modules
+build
+bundle
+buildinfo.json
+generated
+logs
+bvm
+.tool-versions
+.tmp
+
+# Other files
+.vscode
+.DS_Store
+package-lock.json
+coverage
+.env

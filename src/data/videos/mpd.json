@@ -1,0 +1,27 @@
+{
+  "title": "Tears of Steel",
+  "uri": "https://media.axprod.net/TestVectors/Cmaf/clear_1080p_h264/manifest.mpd",
+  "format": "MPD",
+  "secure": false,
+  "uhd": false,
+  "textTrack": [
+    {
+      "label": "English [en]",
+      "language": "en",
+      "uri": "https://media.axprod.net/TestVectors/Cmaf/clear_1080p_h264/subtitle-en.vtt",
+      "mimeType": "application/x-subtitle-vtt"
+    },
+    {
+      "label": "German [de]",
+      "language": "de",
+      "uri": "https://media.axprod.net/TestVectors/Cmaf/clear_1080p_h264/subtitle-de.vtt",
+      "mimeType": "application/x-subtitle-vtt"
+    },
+    {
+      "label": "French [fr]",
+      "language": "fr",
+      "uri": "https://media.axprod.net/TestVectors/Cmaf/clear_1080p_h264/subtitle-fr.vtt",
+      "mimeType": "application/x-subtitle-vtt"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocaleComponent renders correctly without styles 1`] = `
+<RadioPicker
+  defaultValue={
+    Object {
+      "code": "A",
+      "label": "Option 1",
+      "value": "1",
+    }
+  }
+  onSelect={[MockFunction]}
+  options={Array []}
+/>
+`;

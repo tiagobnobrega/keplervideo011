@@ -1,0 +1,217 @@
+[
+  [
+    {
+      "id": "Program1",
+      "channelIdentifier": "Channel1",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0,
+      "title": "Program 1",
+      "subtitle": "program subtitle",
+      "description": "program description",
+      "thumbnailUrl": "http://example1.png",
+      "posterArtUrl": "http://example2.png",
+      "ratings": ["MPAA::G", "Eirin::R15+"],
+      "genres": ["SPORTS", "COMEDY"],
+      "attributes": ["HD", "LIVE"],
+      "seriesInfo": { "season": "Season 1", "episode": "Episode 1" }
+    },
+    {
+      "id": "Program2",
+      "ratings": ["MPAA::G"],
+      "channelIdentifier": "Channel1",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0,
+      "title": "Program 2"
+    },
+    {
+      "id": "Program3",
+      "ratings": ["MPAA::G"],
+      "channelIdentifier": "Channel1",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0,
+      "title": "Program 3"
+    }
+  ],
+  [
+    {
+      "id": "Program1",
+      "ratings": ["MPAA::G"],
+      "channelIdentifier": "Channel2",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0,
+      "title": "Program 1"
+    },
+    {
+      "id": "Program2",
+      "ratings": ["MPAA::G"],
+      "channelIdentifier": "Channel2",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0,
+      "title": "Program 2"
+    },
+    {
+      "id": "Program3",
+      "ratings": ["MPAA::G"],
+      "channelIdentifier": "Channel2",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0,
+      "title": "Program 3"
+    }
+  ],
+  [
+    {
+      "id": "Program1",
+      "ratings": ["MPAA::G"],
+      "channelIdentifier": "Channel3",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0,
+      "title": "Program 1"
+    },
+    {
+      "id": "Program2",
+      "ratings": ["MPAA::G"],
+      "channelIdentifier": "Channel3",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0,
+      "title": "Program 2"
+    },
+    {
+      "id": "Program3",
+      "ratings": ["MPAA::G"],
+      "channelIdentifier": "Channel3",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0,
+      "title": "Program 3"
+    }
+  ],
+  [
+    {
+      "id": "ProgramG",
+      "title": "The Lion King",
+      "ratings": ["MPAA::G"],
+      "channelIdentifier": "Channel4",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0
+    },
+    {
+      "id": "ProgramG",
+      "title": "The Lion King",
+      "ratings": ["MPAA::G"],
+      "channelIdentifier": "Channel4",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0
+    },
+    {
+      "id": "ProgramG",
+      "title": "The Lion King",
+      "ratings": ["MPAA::G"],
+      "channelIdentifier": "Channel4",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0
+    }
+  ],
+  [
+    {
+      "id": "ProgramPG",
+      "title": "Into the Woods",
+      "ratings": ["MPAA::PG"],
+      "channelIdentifier": "Channel5",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0
+    },
+    {
+      "id": "ProgramPG",
+      "title": "Into the Woods",
+      "ratings": ["MPAA::PG"],
+      "channelIdentifier": "Channel5",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0
+    },
+    {
+      "id": "ProgramPG",
+      "title": "Into the Woods",
+      "ratings": ["MPAA::PG"],
+      "channelIdentifier": "Channel5",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0
+    }
+  ],
+  [
+    {
+      "id": "ProgramPG13",
+      "title": "Interstellar",
+      "ratings": ["MPAA::PG-13"],
+      "channelIdentifier": "Channel6",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0
+    },
+    {
+      "id": "ProgramPG13",
+      "title": "Interstellar",
+      "ratings": ["MPAA::PG-13"],
+      "channelIdentifier": "Channel6",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0
+    },
+    {
+      "id": "ProgramPG13",
+      "title": "Interstellar",
+      "ratings": ["MPAA::PG-13"],
+      "channelIdentifier": "Channel6",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0
+    }
+  ],
+  [
+    {
+      "id": "ProgramR",
+      "title": "Kingsman: The Secret Service",
+      "ratings": ["MPAA::R"],
+      "channelIdentifier": "Channel7",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0
+    },
+    {
+      "id": "ProgramR",
+      "title": "Kingsman: The Secret Service",
+      "ratings": ["MPAA::R"],
+      "channelIdentifier": "Channel7",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0
+    },
+    {
+      "id": "ProgramR",
+      "title": "Kingsman: The Secret Service",
+      "ratings": ["MPAA::R"],
+      "channelIdentifier": "Channel7",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0
+    }
+  ],
+  [
+    {
+      "id": "ProgramNC17",
+      "title": "REDACTED",
+      "ratings": ["MPAA::NC-17"],
+      "channelIdentifier": "Channel8",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0
+    },
+    {
+      "id": "ProgramNC17",
+      "title": "REDACTED",
+      "ratings": ["MPAA::NC-17"],
+      "channelIdentifier": "Channel8",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0
+    },
+    {
+      "id": "ProgramNC17",
+      "title": "REDACTED",
+      "ratings": ["MPAA::NC-17"],
+      "channelIdentifier": "Channel8",
+      "channelMajorNumber": 0,
+      "channelMinorNumber": 0
+    }
+  ]
+]

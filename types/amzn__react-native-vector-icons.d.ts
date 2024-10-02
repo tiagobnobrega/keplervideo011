@@ -1,0 +1,1 @@
+declare module '@amzn/react-native-vector-icons/MaterialIcons';

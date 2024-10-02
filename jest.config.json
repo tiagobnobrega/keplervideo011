@@ -1,0 +1,40 @@
+{
+  "preset": "react-native",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "src/**/*.jsx"
+    ],
+  "transformIgnorePatterns": [
+    "node_modules/(?!(react-native|@react-native|@amzn/kepler-ui-components|@amzn/react-native-kepler|@amzn/lottie-react-native)/)"
+  ],
+  "modulePathIgnorePatterns": [
+    "src/w3cmedia/shakaplayer/dist/"
+  ],
+  "coverageDirectory": "<rootDir>/coverage",
+  "globals": {
+    "ts-jest": {
+      "babelConfig": true,
+      "diagnostics": true
+    }
+  },
+  "coverageThreshold": {
+    "global": {
+      "branches": 30,
+      "functions": 36,
+      "lines": 41,
+      "statements": 41
+    }
+  },
+  "coverageReporters": [
+    "json",
+    "json-summary",
+    "cobertura",
+    "clover",
+    "lcov",
+    "text"
+  ],
+  "collectCoverage": true,
+  "setupFilesAfterEnv": ["<rootDir>/jest.setup.ts"]
+}

@@ -1,0 +1,204 @@
+# 
+# Copyright (c) 2022 Amazon.com, Inc. or its affiliates.  All rights reserved.
+# 
+# PROPRIETARY/CONFIDENTIAL.  USE IS SUBJECT TO LICENSE TERMS.
+# 
+schema-version = 1
+
+[package]
+title = "Kepler Video App"
+version = "2.0.0"
+id = "com.amazon.keplervideoapp"
+
+[components]
+[[components.interactive]]
+id = "com.amazon.keplervideoapp.main"
+library-name = "com.amazon.keplervideoapp"
+runtime-module = "/com.amazon.kepler.keplerscript.runtime.loader_2@IKeplerScript_2_0"
+categories = ["com.amazon.category.kva"]
+launch-type = "singleton"
+
+[[components.interactive]]
+id = "com.amazon.keplervideoapp.sync_source"
+library-name = "com.amazon.keplervideoapp"
+runtime-module = "/com.amazon.kepler.keplerscript.runtime.loader_2@IKeplerScript_2_0"
+launch-type = "singleton"
+
+[[components.service]]
+id = "com.amazon.keplervideoapp.interface.provider"
+runtime-module = "/com.amazon.kepler.keplerscript.runtime.loader_2@IKeplerScript_2_0"
+launch-type = "singleton"
+categories = ["com.amazon.category.kepler.media"]
+
+[[components.task]]
+id = "com.amazon.keplervideoapp.onInstallOrUpdateTask"
+runtime-module = "/com.amazon.kepler.keplerscript.runtime.loader_2@IKeplerScript_2_0"
+launch-type = "singleton"
+
+[[components.task]]
+id = "com.amazon.keplervideoapp.epgSyncTask"
+runtime-module = "/com.amazon.kepler.keplerscript.runtime.loader_2@IKeplerScript_2_0"
+launch-type = "singleton"
+
+[processes]
+[[processes.group]]
+component-ids = ["com.amazon.keplervideoapp.main"]
+
+[[processes.group]]
+component-ids = ["com.amazon.keplervideoapp.interface.provider"]
+
+[[processes.group]]
+component-ids = ["com.amazon.keplervideoapp.onInstallOrUpdateTask"]
+
+[[processes.group]]
+component-ids = ["com.amazon.keplervideoapp.epgSyncTask"]
+
+[wants]
+[[wants.service]]
+id = "com.amazon.inputmethod.service"
+
+[[wants.service]]
+id = "com.amazon.drm.key" # Required for DRM video playback
+
+[[wants.service]]
+id = "com.amazon.drm.crypto" # Required for DMR video playback
+
+[[wants.service]]
+id = "com.amazon.iap.tester.service" # Required for IAP functionality
+[[wants.service]]
+id = "com.amazon.iap.core.service" # Required for IAP functionality
+
+#Required to connect to Alberto Service
+[[wants.service]]
+id = "com.amazon.tv.developer.dataservice"
+
+# Privilege required for accessing Subscription Entitlement APIs
+[[wants.privilege]]
+id = "com.amazon.tv.subscription-entitlement.privilege.provide-data"
+
+# Privilege required for accessing Content Personalization APIs.
+[[wants.privilege]]
+id = "com.amazon.tv.content-personalization.privilege.provide-data"
+
+#Required to connect to MediaPlayer/MediaTransform
+[[wants.service]]
+id = "com.amazon.media.server"
+
+[[wants.service]]
+id = "com.amazon.mediametrics.service"
+
+#Required for remote button events.
+[[wants.service]]
+id = "com.amazon.inputd.service"
+
+#Required to connect to MediaControls
+[[wants.service]]
+id = "com.amazon.media.playersession.service"
+
+[[wants.service]]
+id = "com.amazon.mediabuffer.service"
+
+[[wants.service]]
+id = "com.amazon.mediatransform.service"
+
+[[wants.privilege]]
+id = "com.amazon.devconf.privilege.accessibility"
+
+#Required for GIPC SR
+[[wants.service]]
+id = "com.amazon.gipc.uuid.*"
+
+#Required for using the audio stream
+[[wants.service]]
+id = "com.amazon.audio.stream"
+
+#Required for using Volume and Other controls
+[[wants.service]]
+id = "com.amazon.audio.control"
+
+#Required for using Volume and Other controls
+[[wants.service]]
+id = "com.amazon.audio.system"
+
+#Required to get network information
+[[wants.service]]
+id = "com.amazon.network.service"
+
+[needs]
+[[needs.privilege]]
+id = "com.amazon.system.audio"
+
+[[needs.privilege]]
+id = "com.amazon.media.secureplayback"
+
+[[needs.privilege]]
+id = "com.amazon.privilege.security.file-sharing" # Required for DMR video playback
+
+[[needs.privilege]]
+id = "com.amazon.background-tasks.privilege.run"
+
+[[needs.privilege]]
+id = "com.amazon.kepler.tv.privilege.data_provider" # Required to push data to database
+
+[[needs.privilege]]
+id="com.amazon.network.privilege.net-info"
+
+[tasks]
+[[tasks.work]]
+component-id = "com.amazon.keplervideoapp.onInstallOrUpdateTask"
+mode = "install"
+
+[offers]
+[[offers.service]]
+id = "com.amazon.keplervideoapp.interface.provider"
+
+#Required for GIPC SR
+[[offers.service]]
+id = "com.amazon.gipc.uuid.*"
+
+[[offers.interaction]]
+id = "com.amazon.keplervideoapp.main"
+
+[[extras]]
+key = "interface.provider"
+component-id = "com.amazon.keplervideoapp.interface.provider"
+
+# Add extras to declare support for Kepler Channel
+[extras.value.application]
+[[extras.value.application.interface]]
+interface_name = "com.amazon.kepler.media.IChannelServer"
+features = ["ChannelList"]
+
+# Override the component ID which implements Kepler Channel interface to be the interactive component
+[extras.value.application.interface.override_command_component]
+ChangeChannel = "com.amazon.keplervideoapp.main"
+ChangeChannelByNumber = "com.amazon.keplervideoapp.main"
+SkipChannel = "com.amazon.keplervideoapp.main"
+
+# Hardcode ChannelList attribute to [] since we use Kepler EPG Provider to provide channel data
+[extras.value.application.interface.static-values]
+ChannelList = []
+
+# Declare the support for Kepler Content Personalization
+[[extras.value.application.interface]]
+interface_name = "com.amazon.kepler.media.IContentPersonalizationServer"
+attribute_options = ["SupportedCustomerLists"]
+
+[extras.value.application.interface.static_values]
+SupportedCustomerLists = ["Watchlist"]
+
+# Declare the support for Kepler Subscription Entitlement
+[[extras.value.application.interface]]
+interface_name = "com.amazon.kepler.media.ISubscriptionEntitlementServer"
+
+[[extras.value.application.interface]]
+interface_name = "com.amazon.kepler.media.IContentLauncherServer"
+override_command_component = { LaunchContent = "com.amazon.keplervideoapp.main"}
+attribute_options = ["partner-id"]
+
+[extras.value.application.interface.static-values]
+partner-id = "dummy"
+
+[[extras.value.application.interface]]
+interface_name = "com.amazon.kepler.media.IAccountLoginServer"
+attribute_options = ["Status"]

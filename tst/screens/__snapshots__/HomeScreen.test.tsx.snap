@@ -1,0 +1,271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen renders correctly and matches snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#000000",
+      "flex": 1,
+      "paddingLeft": 29,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 0.8,
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <AutoRotator
+      data={
+        Array [
+          Object {
+            "categories": Array [
+              "Hits",
+            ],
+            "channelID": "13454",
+            "description": "Lorem ipsum dolor sit amet",
+            "duration": "124",
+            "id": "169328",
+            "posterUrl": undefined,
+            "rating": "4",
+            "releaseDate": "09/20",
+            "thumbnailUrl": undefined,
+            "title": "Scrimshun",
+            "videoUrl": "https://edge-vod-media.cdn01.net/encoded/0000169/0169319/video_1880k/A57CCB0FI.mp4?source=firetv&channelID=13455",
+          },
+          Object {
+            "categories": Array [
+              "Hits",
+            ],
+            "channelID": "13454",
+            "description": "Lorem ipsum dolor sit amet",
+            "duration": "48",
+            "id": "169329",
+            "posterUrl": undefined,
+            "rating": "4",
+            "releaseDate": "09/20",
+            "thumbnailUrl": undefined,
+            "title": "Dreamcatcher",
+            "videoUrl": "https://edge-vod-media.cdn01.net/encoded/0000169/0169313/video_1880k/T7J66Z106.mp4?source=firetv&channelID=13454",
+          },
+          Object {
+            "categories": Array [
+              "Hits",
+            ],
+            "channelID": "13453",
+            "description": "Lorem ipsum dolor sit amet",
+            "duration": "185",
+            "id": "169330",
+            "posterUrl": undefined,
+            "rating": "4",
+            "releaseDate": "09/20",
+            "thumbnailUrl": undefined,
+            "title": "Twinsouls",
+            "videoUrl": "https://edge-vod-media.cdn01.net/encoded/0000169/0169313/video_1880k/T7J66Z106.mp4?source=firetv&channelID=13454",
+          },
+          Object {
+            "categories": Array [
+              "Hits",
+            ],
+            "channelID": "13455",
+            "description": "Lorem ipsum dolor sit amet",
+            "duration": "156",
+            "id": "169331",
+            "posterUrl": undefined,
+            "rating": "4",
+            "releaseDate": "09/20",
+            "thumbnailUrl": undefined,
+            "title": "Midnight Masquerade",
+            "videoUrl": "https://edge-vod-media.cdn01.net/encoded/0000169/0169319/video_1880k/A57CCB0FI.mp4?source=firetv&channelID=13455",
+          },
+        ]
+      }
+      onFocus={[Function]}
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#000000",
+        "flex": 1,
+        "height": "100%",
+        "marginBottom": 20,
+        "width": "100%",
+      }
+    }
+  >
+    <MovieGrid
+      data={
+        Array [
+          Object {
+            "data": [Function],
+            "heading": "Latest Hits",
+            "testID": "costa_rica_top_rated",
+          },
+          Object {
+            "data": [Function],
+            "heading": "Classics",
+            "testID": "costa_rica_attractions",
+          },
+          Object {
+            "data": [Function],
+            "heading": "Recommendation",
+            "testID": "costa_rica_underwater",
+          },
+          Object {
+            "data": [Function],
+            "heading": "Test Assets",
+            "testID": "test_assets",
+          },
+          Object {
+            "data": [Function],
+            "heading": "New hits",
+            "testID": "new_hits",
+          },
+          Object {
+            "data": [Function],
+            "heading": "Trends",
+            "testID": "trends",
+          },
+        ]
+      }
+      destinations={Array []}
+      initialColumnsToRender={6}
+      initialRowsToRender={3}
+      onTileFocus={[Function]}
+      testID="movieGrid"
+    />
+  </View>
+</View>
+`;
+
+exports[`HomeScreen with touch optimized UX renders correctly and matches snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#000000",
+      "flex": 1,
+      "height": "100%",
+      "marginBottom": 20,
+      "width": "100%",
+    }
+  }
+>
+  <RCTScrollView
+    canChangeSize={false}
+    contentHeight={0}
+    contentWidth={0}
+    dataProvider={
+      DataProvider {
+        "_data": Array [
+          Object {
+            "data": [Function],
+            "heading": "Costa Rica Attractions",
+            "testID": "grid-rotator",
+            "type": "rotator",
+          },
+          Object {
+            "data": [Function],
+            "heading": "Latest Hits",
+            "testID": "costa_rica_top_rated",
+            "type": "carousel",
+          },
+          Object {
+            "data": [Function],
+            "heading": "Classics",
+            "testID": "costa_rica_attractions",
+            "type": "carousel",
+          },
+          Object {
+            "data": [Function],
+            "heading": "Recommendation",
+            "testID": "costa_rica_underwater",
+            "type": "carousel",
+          },
+          Object {
+            "data": [Function],
+            "heading": "Test Assets",
+            "testID": "test_assets",
+            "type": "carousel",
+          },
+          Object {
+            "data": [Function],
+            "heading": "New hits",
+            "testID": "new_hits",
+            "type": "carousel",
+          },
+          Object {
+            "data": [Function],
+            "heading": "Trends",
+            "testID": "trends",
+            "type": "carousel",
+          },
+        ],
+        "_firstIndexToProcess": 0,
+        "_hasStableIds": false,
+        "_requiresDataChangeHandling": false,
+        "_size": 7,
+        "getStableId": [Function],
+        "rowHasChanged": [Function],
+      }
+    }
+    disableRecycling={false}
+    externalScrollView={[Function]}
+    horizontal={false}
+    initialNumToRender={1}
+    initialOffset={0}
+    initialRenderIndex={0}
+    isHorizontal={false}
+    layoutProvider={
+      LayoutProvider {
+        "_getLayoutTypeForIndex": [Function],
+        "_setLayoutForType": [Function],
+        "_tempDim": Object {
+          "height": 0,
+          "width": 0,
+        },
+        "shouldRefreshWithAnchoring": true,
+      }
+    }
+    onEndReachedThreshold={0}
+    onEndReachedThresholdRelative={0}
+    onLayout={[Function]}
+    onScroll={[Function]}
+    onSizeChanged={[Function]}
+    removeClippedSubviews={false}
+    renderAheadOffset={250}
+    rowRenderer={[Function]}
+    scrollEventThrottle={16}
+    scrollThrottle={16}
+    testID="movie-rotator-grid"
+    useWindowScroll={true}
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "flexDirection": "column",
+          }
+        }
+      >
+        <View
+          horizontal={false}
+          renderAheadOffset={250}
+          scrollOffset={0}
+          style={
+            Object {
+              "height": 0,
+              "width": 0,
+            }
+          }
+          windowSize={250}
+        />
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
